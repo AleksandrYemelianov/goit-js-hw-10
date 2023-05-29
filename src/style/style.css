@@ -1,0 +1,38 @@
+@import './loader.css';
+
+body {
+  font-family: Arial, sans-serif;
+  color: #4d4d4d;
+  font-weight: 500;
+  margin: 0;
+  padding: 10px;
+}
+
+.breed-select {
+  max-width: 200px;
+}
+
+.cat-info {
+  display: flex;
+  margin-top: 15px;
+}
+
+.cat-info img {
+  display: block;
+  width: 300px;
+  height: auto;
+  box-shadow: 0px 0px 25px -7px #5897fb;
+}
+
+.cat-info h2 {
+  margin-top: 0;
+}
+
+.desc-wrapper {
+  margin-left: 15px;
+  max-width: 500px;
+}
+
+.is-inactive {
+  display: none;
+}
