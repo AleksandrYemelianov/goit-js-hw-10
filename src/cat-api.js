@@ -2,7 +2,7 @@ const API_KEY = 'live_3Mnea8iNtopVC0hvGsDfEMtgOKxjswZlqkRz9krsSz70qvMXA4BaQRqrC9
 const URL = `https://api.thecatapi.com/v1/`;
 const ENDPOINT = {
     breeds: 'breeds',
-    cat: 'images/search111'
+    cat: 'images/search'
 }
 
 function fetchBreeds() {
