@@ -47,9 +47,15 @@ function markupSelectBreeds(breeds) {
 }
 
 function markupCatInfo(arrCats) {
-    console.log(arrCats);
+    
+    if (arrCats.length === 0) {
+        catInfo.classList.add('is-inactive');
+        return Notiflix.Notify.warning(`Sorry, nothing was found for the breed. You may be interested in other cat breeds.`)
+    }
     const catInfoShow = arrCats.map(({ url, breeds }) => {
+        
         const { name, description, temperament } = breeds[0];
+
         return `
         <img src="${url}" alt="${name}" class=""/>
       <div class="desc-wrapper">
@@ -65,6 +71,7 @@ function onSelectCat(e) {
     const idCat = e.currentTarget.value;
     loaderMassage.classList.remove('is-inactive');
     catInfo.classList.add('is-inactive');
+    
     
     fetchCatByBreed(idCat)
         .then(data => {
